@@ -81,12 +81,11 @@ function downloadAndGenerate () {
   // 下载template到指定的tmp本地路径中
   download(templateRepo, tmp, { clone: false }, err => {
     spinner.stop()
-    // 如果generate函数没有捕获处理异常，那么download方法会捕获异常并执行过回调函数抛出异常
     if (err) logger.fatal('下载模版失败 ' + templateRepo + ': ' + err.message.trim())
     generate(name, tmp, to, generateErr => {
       if (generateErr) logger.fatal(generateErr)
       console.log()
-      logger.success('项目生成 "%s".', name)
+      console.log('项目生成 "%s".', name)
     })
   })
 }

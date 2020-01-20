@@ -12,7 +12,7 @@ process.on('exit', () => {
 request({
   url: 'https://api.github.com/users/lizuncong/repos',
   headers: {
-    'User-Agent': 'create-app-cli', // 不能缺少这个字段
+    'User-Agent': 'create-app-cli',
   }
 }, (err, res, body) => {
   if (err) logger.fatal(err)

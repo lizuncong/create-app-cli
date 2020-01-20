@@ -1,12 +1,11 @@
-1.使用Node开发命令行工具所执行的JavaScript脚本必须
+1.使用Node开发命令行工具所执行的js脚本必须
 在顶部加入 #!/usr/bin/env node声明
 
-2.在终端工具中执行脚本，需要node index.js这样执行，
-如何在终端工具中直接使用自定义的命令执行脚本，比如create-app -v之类的
-首先，初始化npm，执行npm init
-在package.json里面增加
+2.在终端工具中执行脚本，需要 node bin/create-app init testTemplate ../test这样执行，
+如果需要在终端工具中直接使用自定义的命令执行脚本，比如create-app init testTemplate ../test之类的
+首先在package.json里面增加
 "bin": {
-    "create-app": "index.js"
+    "create-app": "bin/create-app"
 }，
 最后要把create-app这个命令链接到全局，运行npm link即可链接到全局
 
@@ -17,7 +16,7 @@ npm发包
 3.将package.json中的name修改为发布到npm上的包名
 这个包名和项目名称无关
 4.打开控制台，执行npm login， 控制台登录npm
-5.登录陈工厚，在项目下执行npm publish发布
+5.登录成功后，在项目下执行npm publish发布
 
 如果发布失败，需要检查是否是npm源的问题
 如果是淘宝的镜像源，需要切回npm的源

@@ -43,7 +43,7 @@ const name = inPlace ? path.relative('../', process.cwd()) : rawName // 项目�
 const to = path.resolve(rawName || '.')
 
 // 存放项目模版文件的路径，将下载的模版存到tmp目录下面
-const tmp = path.join(home, 'project-templates', template)
+const tmp = path.join(home, 'project-templates', 'template')
 
 console.log()
 process.on('exit', () => {
@@ -83,7 +83,6 @@ function downloadAndGenerate () {
     spinner.stop()
     // 如果generate函数没有捕获处理异常，那么download方法会捕获异常并执行过回调函数抛出异常
     if (err) logger.fatal('下载模版失败 ' + templateRepo + ': ' + err.message.trim())
-
     generate(name, tmp, to, generateErr => {
       if (generateErr) logger.fatal(generateErr)
       console.log()

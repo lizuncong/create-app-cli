@@ -1,0 +1,32 @@
+{
+  "name": "create-app-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "lzc",
+  "license": "ISC",
+  "bin": {
+    "create-app": "bin/create-app"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "consolidate": "^0.15.1",
+    "download-git-repo": "^3.0.2",
+    "handlebars": "^4.5.3",
+    "inquirer": "^7.0.3",
+    "log-symbols": "^3.0.0",
+    "metalsmith": "^2.3.0",
+    "minimatch": "^3.0.4",
+    "ora": "^4.0.3",
+    "request": "^2.88.0",
+    "semver": "^7.1.1",
+    "user-home": "^2.0.0",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

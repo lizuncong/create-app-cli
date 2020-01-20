@@ -1,3 +1,5 @@
+这是个创建项目的脚手架工具，目前只有一个可用的模版，测试模版lizuncong/testTemplate。后续会补充react项目模版
+
 1.使用Node开发命令行工具所执行的js脚本必须
 在顶部加入 #!/usr/bin/env node声明
 

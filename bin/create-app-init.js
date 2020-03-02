@@ -26,7 +26,6 @@ program.on('--help', () => {
 })
 
 // 如果没有指定参数，则默认输出help信息，并终止程序
-// (调用program.help()会终止程序执行)
 function help () {
   program.parse(process.argv)
   if (program.args.length < 1) return program.help()

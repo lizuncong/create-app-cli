@@ -1,0 +1,15 @@
+{
+  "extends": "standard",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-new-func": "off"
+  }
+}
